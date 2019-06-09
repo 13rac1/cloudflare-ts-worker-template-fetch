@@ -10,11 +10,11 @@ const someJSONURL = someHost + '/requests/json'
 const someHTMLURL = someHost + '/static/html'
 
 interface JSONToSend {
-  results?: string[],
-  errors?: string | null,
-  msg?: string,
+  results?: string[]
+  errors?: string | null
+  msg?: string
 }
-const someJSONToSend:JSONToSend = {
+const someJSONToSend: JSONToSend = {
   results: ['default data to send'],
   errors: null,
   msg: 'I sent this to the fetch',
@@ -32,7 +32,7 @@ const someDefaultJSONToRespond = {
  */
 async function gatherResponse(response: Response) {
   const { headers } = response
-  const contentType = headers.get('content-type') || ""
+  const contentType = headers.get('content-type') || ''
 
   if (contentType.includes('application/json')) {
     const body = await response.json()
@@ -56,7 +56,10 @@ async function gatherResponse(response: Response) {
  * @param {string} url the URL to send the request to
  * @param {BodyInit} body the JSON data to send in the request
  */
-async function fetchPostJson(url: string, body: JSONToSend = {}): Promise<string> {
+async function fetchPostJson(
+  url: string,
+  body: JSONToSend = {}
+): Promise<string> {
   const init = {
     body: JSON.stringify(body),
     method: 'POST',
@@ -77,7 +80,6 @@ async function fetchPostJson(url: string, body: JSONToSend = {}): Promise<string
  * @param {string} url the URL to send the request to
  */
 async function fetchGetHtml(url: string) {
-
   const response = await fetch(url)
   const respBody = await gatherResponse(response)
   return respBody
@@ -101,8 +103,8 @@ self.addEventListener('fetch', (event: FetchEvent) => {
       },
     }
     respBody = fetchPostJson(someJSONURL, someJSONToSend)
-  }
-  else { //url.endsWith('/html')
+  } else {
+    // if url.endsWith('/html')
     // Default to HTML
     init = {
       headers: {
