@@ -4,13 +4,17 @@
     "description": "package for creating workers templates",
     "main": "index.js",
     "scripts": {
+        "build": "tsc",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write '**/*.{js,css,json,md}'"
+        "prettier:base": "prettier --parser typescript --single-quote",
+        "format": "npm run prettier:base -- --write '*.ts'"
     },
     "author": "{{ authors }}",
     "license": "ISC",
     "devDependencies": {
-        "prettier": "^1.17.0"
+        "prettier": "^1.17.0",
+        "types-cloudflare-worker": "^1.0.0",
+        "typescript": "^3.5.1"
     },
     "dependencies": {
         "serverless-cloudflare-workers": "^1.2.0"

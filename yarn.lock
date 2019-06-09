@@ -2412,6 +2412,16 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+types-cloudflare-worker@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/types-cloudflare-worker/-/types-cloudflare-worker-1.0.0.tgz#91bec2e2b36fd0977d42a1a968636f587b70720e"
+  integrity sha512-jEGN3BT+N4dSEIhGECikRyAabgss71umR/D7ssloKrG1SDUo13pteOBFUXAdq7XTJbuX73iiF3XNJTFGVYyN9w==
+
+typescript@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.1.tgz#ba72a6a600b2158139c5dd8850f700e231464202"
+  integrity sha512-64HkdiRv1yYZsSe4xC1WVgamNigVYjlssIoaH2HcZF0+ijsk5YK2g0G34w9wJkze8+5ow4STd22AynfO6ZYYLw==
+
 union-value@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/union-value/-/union-value-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"
